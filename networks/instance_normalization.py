@@ -1,7 +1,7 @@
 from tensorflow.keras.layers import InputSpec, Layer
 from tensorflow.keras import initializers, regularizers, constraints
 from tensorflow.keras import backend as K
-from tensorflow.keras.utils.generic_utils import get_custom_objects
+from tensorflow.python.keras.utils.generic_utils import get_custom_objects
 
 import numpy as np
 
