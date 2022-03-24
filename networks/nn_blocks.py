@@ -1,6 +1,6 @@
 from tensorflow.keras.layers import *
 from tensorflow import keras
-from keras.layers.advanced_activations import LeakyReLU
+from tensorflow.keras.layers import LeakyReLU
 from .instance_normalization import InstanceNormalization
 from .GroupNormalization import GroupNormalization
 from .pixel_shuffler import PixelShuffler
