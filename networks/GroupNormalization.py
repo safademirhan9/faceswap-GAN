@@ -1,12 +1,12 @@
-from keras.engine import Layer, InputSpec
-from keras import initializers, regularizers
-from keras import backend as K
-from keras.utils import conv_utils
+from tensorflow.keras.engine import Layer, InputSpec
+from tensorflow.keras import initializers, regularizers
+from tensorflow.keras import backend as K
+from tensorflow.keras.utils import conv_utils
 
 try:
-    from keras.utils.conv_utils import normalize_data_format
+    from tensorflow.keras.utils.conv_utils import normalize_data_format
 except:
-    from keras.backend.common import normalize_data_format
+    from tensorflow.keras.backend.common import normalize_data_format
 
 def to_list(x):
     if type(x) not in [list, tuple]:
