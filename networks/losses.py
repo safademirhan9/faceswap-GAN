@@ -1,4 +1,4 @@
-from keras.layers import Lambda, concatenate
+from tensorflow.keras.layers import Lambda, concatenate
 from tensorflow.contrib.distributions import Beta
 from .instance_normalization import InstanceNormalization
 import keras.backend as K
