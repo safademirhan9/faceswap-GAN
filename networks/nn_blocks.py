@@ -1,13 +1,14 @@
 from tensorflow.keras.layers import *
 from tensorflow import keras
+from tensorflow.keras import backend as K
 from tensorflow.keras.layers import LeakyReLU
+from tensorflow.keras import regularizers
 from .instance_normalization import InstanceNormalization
 from .GroupNormalization import GroupNormalization
 from .pixel_shuffler import PixelShuffler
 from .custom_layers.scale_layer import Scale
 from .custom_inits.icnr_initializer import icnr_keras
 import tensorflow as tf
-from tensorflow.keras import backend as K
 
 
 # initializers and weight decay regularization are fixed
