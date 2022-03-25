@@ -1,5 +1,5 @@
 from tensorflow.keras.layers import Layer, InputSpec
-from keras import backend as K
+from tensorflow.keras import backend as K
 from keras import initializers
 
 class Scale(Layer):
