@@ -1,7 +1,7 @@
 from tensorflow.keras.layers import Lambda, concatenate
 from tensorflow.contrib.distributions import Beta
 from .instance_normalization import InstanceNormalization
-import keras.backend as K
+from tensorflow.keras import backend as K
 import tensorflow as tf
 
 def first_order(x, axis=1):
