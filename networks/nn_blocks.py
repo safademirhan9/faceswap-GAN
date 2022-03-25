@@ -7,7 +7,7 @@ from .pixel_shuffler import PixelShuffler
 from .custom_layers.scale_layer import Scale
 from .custom_inits.icnr_initializer import icnr_keras
 import tensorflow as tf
-from tf.keras import backend as K
+from tensorflow.keras import backend as K
 
 
 # initializers and weight decay regularization are fixed
