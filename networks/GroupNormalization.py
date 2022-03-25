@@ -1,5 +1,6 @@
 from tensorflow.keras.layers import InputSpec, Layer
 from tensorflow.keras import initializers, regularizers
+from keras import regularizers
 from tensorflow.keras import backend as K
 from tensorflow.python.keras.utils import conv_utils
 
