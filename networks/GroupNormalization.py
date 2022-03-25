@@ -6,7 +6,8 @@ from tensorflow.python.keras.utils import conv_utils
 try:
     from tensorflow.keras.utils.conv_utils import normalize_data_format
 except:
-    from tensorflow.keras.backend.common import normalize_data_format
+    #from tensorflow.keras.backend.common import normalize_data_format
+    from tensorflow.keras.utils.conv_utils import normalize_data_format
 
 def to_list(x):
     if type(x) not in [list, tuple]:
