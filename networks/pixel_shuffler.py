@@ -2,7 +2,7 @@
 # by t-ae
 # https://gist.github.com/t-ae/6e1016cc188104d123676ccef3264981
 
-from tensorflow.keras.utils import conv_utils
+from tensorflow.python.keras.utils import conv_utils
 from tensorflow.keras.engine.topology import Layer
 import tensorflow.keras.backend as K
 
