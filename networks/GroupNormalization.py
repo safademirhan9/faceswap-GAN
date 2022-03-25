@@ -1,7 +1,7 @@
 from tensorflow.keras.layers import InputSpec, Layer
 from tensorflow.keras import initializers, regularizers
 from tensorflow.keras import backend as K
-from tensorflow.keras.utils import conv_utils
+from tensorflow.python.keras.utils import conv_utils
 
 try:
     from tensorflow.keras.utils.conv_utils import normalize_data_format
