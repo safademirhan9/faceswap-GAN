@@ -2,6 +2,7 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import *
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras import regularizers
+from keras import regularizers
 from .nn_blocks import *
 from .losses import *
 
