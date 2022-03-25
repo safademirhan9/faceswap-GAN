@@ -3,6 +3,7 @@ from tensorflow import keras
 from tensorflow.keras import backend as K
 from tensorflow.keras.layers import LeakyReLU
 from tensorflow.keras import regularizers
+from keras import regularizers
 from .instance_normalization import InstanceNormalization
 from .GroupNormalization import GroupNormalization
 from .pixel_shuffler import PixelShuffler
