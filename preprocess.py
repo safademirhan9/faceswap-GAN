@@ -50,6 +50,7 @@ def process_image(input_img, info, detector, save_interval, save_path):
     return np.zeros((3,3,3))
 
 def preprocess_video(fn_input_video, fd, save_interval, save_path):
+    print(fn_input_video)
     info = VideoInfo()
     output = 'dummy.mp4'
     print(fn_input_video)
