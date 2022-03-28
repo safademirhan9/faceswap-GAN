@@ -17,7 +17,7 @@ class Scale(Layer):
 
         # Compatibility with TensorFlow >= 1.0.0
         self.gamma = K.variable(self.gamma_init((1,)), name='{}_gamma'.format(self.name))
-        self.trainable_weights = [self.gamma]
+        self._trainable_weights = [self.W] = [self.gamma]
 
         if self.initial_weights is not None:
             self.set_weights(self.initial_weights)
