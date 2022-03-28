@@ -52,6 +52,7 @@ def process_image(input_img, info, detector, save_interval, save_path):
 def preprocess_video(fn_input_video, fd, save_interval, save_path):
     info = VideoInfo()
     output = 'dummy.mp4'
+    print(fn_input_video)
     clip1 = VideoFileClip(fn_input_video)
     print()
     print(type(clip1))
