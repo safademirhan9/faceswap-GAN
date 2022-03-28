@@ -54,6 +54,7 @@ def preprocess_video(fn_input_video, fd, save_interval, save_path):
     output = 'dummy.mp4'
     clip1 = VideoFileClip(fn_input_video)
     clip = clip1.fl_image(lambda img: process_image(img, info, fd, save_interval, save_path))
+    print(type(clip))
     clip.write_videofile(output, audio=False, verbose=False)
     clip1.reader.close()
 
