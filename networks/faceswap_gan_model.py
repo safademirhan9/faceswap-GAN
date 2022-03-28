@@ -18,6 +18,8 @@ class FaceswapGANModel():
         lrD: float, learning rate of the discriminator
     """
     def __init__(self, **arch_config):
+        self.netDA_train = None
+        self.netDB_train = None
         self.nc_G_inp = 3
         self.nc_D_inp = 6 
         self.IMAGE_SHAPE = arch_config['IMAGE_SHAPE']
