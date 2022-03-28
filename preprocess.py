@@ -50,16 +50,16 @@ def process_image(input_img, info, detector, save_interval, save_path):
     return np.zeros((3,3,3))
 
 def preprocess_video(fn_input_video, fd, save_interval, save_path):
-    print(fn_input_video)
-    info = VideoInfo()
-    output = 'dummy.mp4'
-    print(fn_input_video)
+    #print(fn_input_video)
+    #info = VideoInfo()
+    #output = 'dummy.mp4'
+    #print(fn_input_video)
     clip1 = VideoFileClip(fn_input_video, audio=False)
-    print()
-    print(type(clip1))
-    clip = clip1.fl_image(lambda img: process_image(img, info, fd, save_interval, save_path))
-    print(type(clip))
-    clip.write_videofile(output, audio=False, verbose=False)
+    #print()
+    #print(type(clip1))
+    #clip = clip1.fl_image(lambda img: process_image(img, info, fd, save_interval, save_path))
+    #print(type(clip))
+    #clip.write_videofile(output, audio=False, verbose=False)
     clip1.reader.close()
 
         
