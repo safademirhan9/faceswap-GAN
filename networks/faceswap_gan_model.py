@@ -270,6 +270,7 @@ class FaceswapGANModel():
     def build_pl_model(self, vggface_model, before_activ=False):
         # Define Perceptual Loss Model
         vggface_model.trainable = False
+        print('---Before if------')
         if before_activ == False:
             out_size112 = vggface_model.layers[1].output
             out_size55 = vggface_model.layers[36].output
@@ -280,8 +281,11 @@ class FaceswapGANModel():
             out_size55 = vggface_model.layers[35].output
             out_size28 = vggface_model.layers[77].output
             out_size7 = vggface_model.layers[-3].output
+        print('---After if------')
         self.vggface_feats = Model(vggface_model.input, [out_size112, out_size55, out_size28, out_size7])
+        print('---After Model------')
         self.vggface_feats.trainable = False
+        print('---After trainable------')
     
     def load_weights(self, path="./models"):
         try:
