@@ -16,7 +16,8 @@ from tensorflow.keras.layers import Flatten, Dense, Input, GlobalAveragePooling2
 from keras_applications.imagenet_utils import _obtain_input_shape
 #from tensorflow.keras.utils import layer_utils
 from tensorflow.python.keras.utils import layer_utils
-from tensorflow.keras.utils.data_utils import get_file
+#from tensorflow.keras.utils.data_utils import get_file
+from tensorflow.python.keras.utils.data_utils import get_file
 from tensorflow.keras import backend as K
 #from keras_vggface import utils
 from tensorflow.keras.engine.topology import get_source_inputs
