@@ -253,16 +253,16 @@ class FaceswapGANModel():
 
         # Define training functions
         # Adam(...).get_updates(...)
-        training_updates = Adam(lr=self.lrD*loss_config['lr_factor'], beta_1=0.5).get_updates(weightsDA,[], loss_DA)
+        training_updates = Adam(lr=self.lrD*loss_config['lr_factor'], beta_1=0.5).get_updates(weightsDA, loss_DA)
         self.netDA_train = K.function([self.distorted_A, self.real_A],[loss_DA], training_updates)
-        training_updates = Adam(lr=self.lrG*loss_config['lr_factor'], beta_1=0.5).get_updates(weightsGA, [], loss_GA)
+        training_updates = Adam(lr=self.lrG*loss_config['lr_factor'], beta_1=0.5).get_updates(weightsGA, loss_GA)
         self.netGA_train = K.function([self.distorted_A, self.real_A, self.mask_eyes_A], 
                                       [loss_GA, loss_adv_GA, loss_recon_GA, loss_edge_GA, loss_pl_GA], 
                                       training_updates)
 
-        training_updates = Adam(lr=self.lrD*loss_config['lr_factor'], beta_1=0.5).get_updates(weightsDB, [], loss_DB)
+        training_updates = Adam(lr=self.lrD*loss_config['lr_factor'], beta_1=0.5).get_updates(weightsDB, loss_DB)
         self.netDB_train = K.function([self.distorted_B, self.real_B],[loss_DB], training_updates)
-        training_updates = Adam(lr=self.lrG*loss_config['lr_factor'], beta_1=0.5).get_updates(weightsGB, [], loss_GB)
+        training_updates = Adam(lr=self.lrG*loss_config['lr_factor'], beta_1=0.5).get_updates(weightsGB, loss_GB)
         self.netGB_train = K.function([self.distorted_B, self.real_B, self.mask_eyes_B], 
                                       [loss_GB, loss_adv_GB, loss_recon_GB, loss_edge_GB, loss_pl_GB], 
                                       training_updates)
